@@ -2,6 +2,9 @@
 
 # ms-recent-manager
 
+
+![screenshot](ms-recent-manager_screenshot.png)
+
 ## Introduction
 The MuseScore Recent Files Manager is a user-friendly application designed to help you manage the list of recent files displayed in MuseScore. With this tool, you can:
 
