@@ -1,6 +1,6 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-# ms-recent-manager
+# ms-recentfiles-manager
 
 
 ![screenshot](ms-recent-manager_screenshot.png)
@@ -22,11 +22,10 @@ This application does not modify or delete the actual score files; it only updat
 
 ### Launching the Application
 
-    Save the script as ms-recent-manager.py or ms-recent-manager.pyw (on Windows, use .pyw to suppress the terminal).
-    Run the script:
-        Windows: Double-click the .pyw file.
-        macOS/Linux: Run python3 musicxml_merger_gui.py in the terminal.
-
+   1. Save the script as ms-recentfiles-manager.py or ms-recentfiles-manager.pyw (on Windows, use .pyw to suppress the terminal).
+   2. Run the script:
+        - **Windows**: Double-click the `.pyw` file.
+        - **macOS/Linux**: Run `python3 ms-recentfiles-manager.py` in the terminal.
 
 ---
 
