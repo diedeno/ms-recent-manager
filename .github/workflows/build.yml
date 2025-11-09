@@ -22,7 +22,7 @@ jobs:
         pip install -r requirements.txt || echo "requirements.txt not found, skipping"
     - name: Build with PyInstaller
       run: |
-        pyinstaller --onefile --noconsole --name ms-recent-manager-linux ms-recent-manager.py
+        pyinstaller --onefile --noconsole --name ms-recentfiles-manager-lx ms-recentfiles-manager.py
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -44,7 +44,7 @@ jobs:
         pip install -r requirements.txt || echo "requirements.txt not found, skipping"
     - name: Build with PyInstaller
       run: |
-        pyinstaller --onefile --noconsole --name ms-recent-manager-win ms-recent-manager.py
+        pyinstaller --onefile --noconsole --name ms-recentfiles-manager-win ms-recentfiles-manager.py
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -66,7 +66,7 @@ jobs:
         pip install -r requirements.txt || echo "requirements.txt not found, skipping"
     - name: Build with PyInstaller
       run: |
-        pyinstaller --onefile --noconsole --name ms-recent-manager-mac ms-recent-manager.py
+        pyinstaller --onefile --noconsole --name ms-recentfiles-manager-mac ms-recentfiles-manager.py
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
