@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 import json
 import tkinter as tk
@@ -25,8 +27,8 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 
 # Application Info
-VERSION = "1.0"
-LAST_MODIFIED = "2025-01-21"
+VERSION = "1.1"
+LAST_MODIFIED = "20251110"
 LICENSE = "GPLv3"
 
 # Determine JSON File Path Based on OS
@@ -187,6 +189,27 @@ def backup_json():
     shutil.copy(json_file_path, backup_path)
     messagebox.showinfo("Backup", f"Backup created at {backup_path}")
 
+
+def show_about():
+        about = tk.Toplevel(root)
+        about.title("About MuseScore Recentfiles editor")
+        about.geometry("400x300")
+        about.resizable(False, False)
+
+        tk.Label(about, text="MuseScore Recentfiles editor", font=("Arial", 14, "bold")).pack(pady=10)
+        tk.Label(about, text=f"Version {VERSION} |  Last Modified: {LAST_MODIFIED}", font=("Arial", 11)).pack(pady=2)
+        tk.Label(about, text="© 2025 Diego Denolf", font=("Arial", 10)).pack(pady=2)
+        
+        msg = (
+            "Manage the list of recent files displayed in MuseScore.\n" 
+            "This application does not modify or delete the actual score files; it only updates the recent files list used by MuseScore.\n\n"
+            
+            "Licensed under the GNU GPL v3."
+        )
+        tk.Label(about, text=msg, wraplength=360, justify="left").pack(padx=15, pady=10)
+
+        tk.Button(about, text="Close", command=about.destroy).pack(pady=5)
+
 # Create GUI Components
 frame = ttk.Frame(root)
 frame.pack(fill="both", expand=True, padx=10, pady=10)
@@ -235,8 +258,8 @@ save_button.pack(side="left", padx=5)
 exit_button = ttk.Button(button_frame, text="Exit", command=root.quit)
 exit_button.pack(side="right", padx=5)
 
-footer = ttk.Label(root, text=f"Version: {VERSION} | Last Modified: {LAST_MODIFIED} | License: {LICENSE}")
-footer.pack(side="bottom", pady=5)
+about_button = ttk.Button(button_frame, text="About", command=show_about)
+about_button.pack(side="right", padx=5)
 
 # Initialize Treeview
 refresh_treeview()
