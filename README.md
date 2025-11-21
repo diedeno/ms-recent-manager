@@ -22,11 +22,9 @@ This application does not modify or delete the actual score files; it only updat
 
 ### Launching the Application
 
-   1. Save the script as ms-recentfiles-manager.py or ms-recentfiles-manager.pyw (on Windows, use .pyw to suppress the terminal).
-   2. Run the script:
-        - **Windows**: Double-click the `.pyw` file.
-        - **macOS/Linux**: Run `python3 ms-recentfiles-manager.py` in the terminal.
-
+   1. Use a OS specific binary from releases, or
+   2. Run the python script: Run `python3 ms-recentfiles-manager.py` in the terminal.
+    
 ---
 
 ## Features
